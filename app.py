@@ -8,8 +8,6 @@ from io import BytesIO
 
 # Set page config
 st.set_page_config(
-    page_title="Website Email Extractor",
-    page_icon=":envelope:",
     layout="wide"
 )
 
@@ -73,7 +71,6 @@ def process_file(uploaded_file):
         return None, f"Error reading file: {str(e)}"
 
 def main():
-    st.title("Website Email Extractor")
     st.markdown("""
     Upload a CSV or Excel file containing website URLs, and this tool will extract email addresses from each website.
     The results will include a new column with all found emails separated by " / ".
